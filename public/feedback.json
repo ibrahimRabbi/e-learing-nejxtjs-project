@@ -1,0 +1,59 @@
+
+   [
+    {
+        "name": "Tahiya Faiza",
+        "designation": "CEO, ABC Company",
+        "comment": "কোর্সটির প্রতিটি সেকশনে ছিল স্পষ্ট নির্দেশনা । বিশেষ করে, “Reading” এবং “Writing” সেকশন এতটাই informative ছিল যা আমার জন্য Mock Test এবং Real Exam"
+    },
+    {
+        "name": "Rahim Uddin",
+        "designation": "Manager, XYZ Ltd.",
+        "comment": "এই কোর্সটি আমার জন্য খুবই সহায়ক ছিল। বিশেষ করে, “Listening” এবং “Speaking” সেকশনগুলো আমার ইংরেজি দক্ষতা বাড়াতে সাহায্য করেছে।"
+    },
+    {
+        "name": "Ayesha Akter",
+        "designation": "Teacher, ABC School",
+        "comment": "কোর্সটির “Grammar” এবং “Vocabulary” সেকশনগুলো খুবই কার্যকরী ছিল। আমি আমার শিক্ষার্থীদের জন্যও এই কোর্সটি সুপারিশ করব।"
+    },
+    {
+        "name": "Karim Hossain",
+        "designation": "Student, DEF University",
+        "comment": "কোর্সটি আমার একাডেমিক প্রস্তুতির জন্য খুবই সহায়ক ছিল। “Reading” এবং “Writing” সেকশনগুলো আমার জন্য বিশেষভাবে উপকারী ছিল।"
+    },
+    {
+        "name": "Fatema Begum",
+        "designation": "Freelancer",
+        "comment": "এই কোর্সটি আমার ফ্রিল্যান্সিং ক্যারিয়ারের জন্য খুবই সহায়ক ছিল। “Speaking” এবং “Listening” সেকশনগুলো আমার ক্লায়েন্টদের সাথে যোগাযোগ করতে সাহায্য করেছে।"
+    },
+    {
+        "name": "Jamil Ahmed",
+        "designation": "Engineer, GHI Corp.",
+        "comment": "কোর্সটির “Technical Writing” সেকশনটি আমার পেশাগত জীবনে খুবই সহায়ক ছিল। আমি এই কোর্সটি আমার সহকর্মীদের জন্যও সুপারিশ করব।"
+    },
+    {
+        "name": "Nusrat Jahan",
+        "designation": "HR, JKL Ltd.",
+        "comment": "কোর্সটির “Communication Skills” সেকশনটি আমার পেশাগত জীবনে খুবই সহায়ক ছিল। আমি এই কোর্সটি আমার সহকর্মীদের জন্যও সুপারিশ করব।"
+    },
+    {
+        "name": "Sajid Khan",
+        "designation": "Marketing Executive, MNO Inc.",
+        "comment": "কোর্সটির “Presentation Skills” সেকশনটি আমার পেশাগত জীবনে খুবই সহায়ক ছিল। আমি এই কোর্সটি আমার সহকর্মীদের জন্যও সুপারিশ করব।"
+    },
+    {
+        "name": "Rina Akter",
+        "designation": "Content Writer, PQR Media",
+        "comment": "কোর্সটির “Creative Writing” সেকশনটি আমার পেশাগত জীবনে খুবই সহায়ক ছিল। আমি এই কোর্সটি আমার সহকর্মীদের জন্যও সুপারিশ করব।"
+    },
+    {
+        "name": "Hasan Mahmud",
+        "designation": "Software Developer, STU Tech",
+        "comment": "কোর্সটির “Technical Communication” সেকশনটি আমার পেশাগত জীবনে খুবই সহায়ক ছিল। আমি এই কোর্সটি আমার সহকর্মীদের জন্যও সুপারিশ করব।"
+    },
+    {
+        "name": "Mina Rahman",
+        "designation": "Researcher, VWX Institute",
+        "comment": "কোর্সটির “Academic Writing” সেকশনটি আমার গবেষণার জন্য খুবই সহায়ক ছিল। আমি এই কোর্সটি আমার সহকর্মীদের জন্যও সুপারিশ করব।"
+    }
+
+]

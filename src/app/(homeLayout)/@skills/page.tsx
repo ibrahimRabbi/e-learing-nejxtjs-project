@@ -1,6 +1,7 @@
 import { FaCheck } from 'react-icons/fa';
 import SkillSlider from './_compo/SkillSlider';
 import LanguageCourse from './_compo/LanguageCourse';
+import Client from './_compo/Client';
 
 
 
@@ -27,6 +28,7 @@ const page = () => {
                 <div className='py-10'>
                     <SkillSlider />  
                     <LanguageCourse />
+                    <Client/>
                   </div>
                
             </div>

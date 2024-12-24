@@ -1,0 +1,7 @@
+.bgImage{
+    background-image: url('../../../assets/redBG.jpg');
+    ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
