@@ -4,6 +4,7 @@ import Manubar from './_navCompo/Manubar';
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoSearch } from 'react-icons/io5';
 import Rmanubar from '@/components/ui/responsive/Rmanubar';
+import Link from 'next/link';
  
 
 
@@ -39,9 +40,9 @@ const page = () => {
                         <BsTelephoneFill />
                         <span className='md:flex hidden'>16910</span>
                     </div>
-                    <button className="bg-green-500 text-white py-2 px-6 text-sm font-semibold rounded-lg">
+                    <Link href='/auth/log-in' className="bg-green-500 text-white py-2 px-6 text-sm font-semibold rounded-lg">
                         লগ-ইন
-                    </button>
+                    </Link>
                 </div>
             </div>
             <Rmanubar/>

@@ -13,15 +13,15 @@ const page = () => {
 
             <div className='grid grid-cols-1 md:gap-8 gap-5 md:grid-cols-3 my-8 w-[90%] mx-auto '>
                 <div className='bg-[rgba(0,0,0,0.38)] py-2 rounded-lg'>
-                    <CountUp className='text-6xl font-semibold' end={15584} start={1} enableScrollSpy />
+                    <CountUp className='text-6xl font-semibold' end={15584} start={1} duration={3} scrollSpyOnce scrollSpyDelay={800} />
                     <p className='mt-2'>মোট শিক্ষার্থী</p>
                 </div>
                 <div className='bg-[rgba(0,0,0,0.36)] py-2 rounded-lg'>
-                    <CountUp className='text-6xl font-semibold' end={1400} start={1} enableScrollSpy />
+                    <CountUp className='text-6xl font-semibold' end={1400} start={1} duration={3} scrollSpyOnce scrollSpyDelay={800} />
                     <p className='mt-2'>চান্সপ্রাপ্ত শিক্ষার্থী</p>
                 </div>
                 <div className='bg-[rgba(0,0,0,0.4)] py-2 rounded-lg'>
-                    <CountUp className='text-6xl font-semibold' end={34} start={1} enableScrollSpy />
+                    <CountUp className='text-6xl font-semibold' end={34} start={1} duration={3} scrollSpyOnce scrollSpyDelay={800} />
                     <p className='mt-2'>টপ ১০০-তে চান্সপ্রাপ্ত শিক্ষার্থী</p>
                 </div>
             </div>
