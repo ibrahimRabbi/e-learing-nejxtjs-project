@@ -5,12 +5,18 @@ import { useForm } from "react-hook-form"
 import logo from '@/assets/10 mint logo.svg'
 import Link from "next/link";
 import toast from "react-hot-toast";
+import { setCookie } from "cookies-next";
+import { useRouter } from "next/navigation";
 
 
 
 const SignUp = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const router = useRouter();
+
+
+
 
     const submitHandler = (data: any) => {
         if (data.password !== data.confirm) {
@@ -18,15 +24,17 @@ const SignUp = () => {
         } else {
             fetch('http://localhost:5000/api/auth/sign-up', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             })
                 .then(res => res.json())
                 .then(data => {
                     if (data.success) {
+                        setCookie('accessToken', data.accessToken);
                         toast.success('account created successfully')
+                        router.push('/')
                     } else {
-                        toast.error('something went wrong')
+                        toast.error(data.message)
                     }
                 })
         }
@@ -39,7 +47,7 @@ const SignUp = () => {
                 <Image src={logo} alt="login" className="w-28 block mx-auto" width={200} />
                 <h1 className="text-2xl text-center mt-2">create new account</h1>
             </div>
-            <form className="w-[30%] mx-auto space-y-6 mt-6" onSubmit={handleSubmit(submitHandler)}>
+            <form className="md:w-[30%] w-[80%] mx-auto space-y-6 mt-6" onSubmit={handleSubmit(submitHandler)}>
                 <div>
                     <Input {...register('email', { required: true })} placeholder="email" type="email" />
                     {errors.email?.type == 'required' && <span className="text-red-500 text-xs">email is required</span>}
@@ -62,8 +70,8 @@ const SignUp = () => {
 
 
             <div className="text-sm font-semibold mt-8 flex items-center justify-center text-center mx-auto">
-                <p>have an account?</p>
-                <Link className="text-green-600" href='/auth/sign-up' >Sign Up</Link>
+                <p>have an account? </p>
+                <Link className="text-green-600" href='/auth/sign-in'> Login</Link>
             </div>
 
 

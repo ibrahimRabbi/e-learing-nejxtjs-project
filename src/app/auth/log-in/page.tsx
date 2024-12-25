@@ -4,12 +4,40 @@ import Image from "next/image";
 import { useForm } from "react-hook-form"
 import logo from '@/assets/10 mint logo.svg'
 import Link from "next/link";
+import { setCookie } from "cookies-next/client";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 
 
 const LoginIn = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const router = useRouter();
+
+
+
+
+    const submitHandler = (data: any) => {
+            fetch('http://localhost:5000/api/auth/sign-in', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        setCookie('accessToken', data.accessToken);
+                        toast.success('Login successfully')
+                        router.push('/')
+                    } else {
+                        toast.error(data.message)
+                    }
+                })
+       
+    }
+
+
 
 
     return (
@@ -20,7 +48,7 @@ const LoginIn = () => {
                 <Image src={logo} alt="login" className="w-28 block mx-auto" width={200} />
                 <h1 className="text-2xl text-center mt-2">Login your account</h1>
             </div>
-            <form className="w-[30%] mx-auto space-y-6 mt-6" onSubmit={handleSubmit((data) => console.log(data))}>
+            <form className="md:w-[30%] w-[80%] mx-auto space-y-6 mt-6" onSubmit={handleSubmit(submitHandler)}>
                 <div>
                     <Input {...register('email', { required: true })} placeholder="email" type="email" />
                     {errors.email?.type == 'required' && <span className="text-red-500 text-xs">email is required</span>}
