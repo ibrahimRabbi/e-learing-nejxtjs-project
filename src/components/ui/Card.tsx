@@ -4,7 +4,7 @@ import { Rating as ReactRating } from '@smastrom/react-rating'
 
 const Card = ({ data }: {data:any}) => {
     return (
-        <div className="w-[250px] backdrop-blur-md bg-[rgba(131,129,129,0.32)] rounded-xl p-2">
+        <div className="md:w-[250px] backdrop-blur-md bg-[rgba(131,129,129,0.32)] rounded-xl p-2">
             <Image src={data?.image} alt='liveImage' className='w-full rounded-md' height={300} width={200} />
 
             <div className="">

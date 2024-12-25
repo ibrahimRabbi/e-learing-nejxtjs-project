@@ -5,11 +5,13 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const OurInstatuite = () => {
     return (
-        <div className='relative bg-gradient-to-br from-[rgba(90,24,34,0.73)] to-[rgba(53,17,22,0.66)] p-6 w-[100%] mt-20 rounded-xl border border-[#81222f]'>
-            <span className='bg-[#351116] absolute -top-5 left-[540px] text-sm text-[#b32b3d] border border-[#c4283c] py-2 px-5 rounded-full'>অফলাইন সেন্টার</span>
-            <p className='text-[22px] font-semibold mt-5 tracking-widest text-white text-center mx-auto w-[40%] '>অনলাইনে ৫ লক্ষাধিক শিক্ষার্থীকে ইংরেজি শিখিয়ে আমরা এখন অফলাইনে</p>
+        <div className='relative bg-gradient-to-br from-[rgba(90,24,34,0.73)] to-[rgba(53,17,22,0.66)] md:p-6 p-2 w-[100%] md:mt-20 mt-12 rounded-xl border border-[#81222f]'>
 
-            <div className='text-white text-center mt-5 flex items-center justify-center gap-6'>
+
+            <span className='bg-[#351116] md:flex hidden md:absolute -top-5 left-[540px] text-sm text-[#b32b3d] border border-[#c4283c] py-2 px-5 rounded-full'>অফলাইন সেন্টার</span>
+            <p className='text-[22px] font-semibold mt-5 tracking-widest text-white text-center mx-auto md:w-[40%] '>অনলাইনে ৫ লক্ষাধিক শিক্ষার্থীকে ইংরেজি শিখিয়ে আমরা এখন অফলাইনে</p>
+
+            <div className='text-white text-center mt-5 flex items-center justify-center flex-wrap gap-6'>
                 <span className='flex text-sm items-center justify-center rounded-md gap-2 bg-[rgba(255,255,255,0.24)] p-2'><CiLocationOn className='size-5' /> উত্তরা</span>
                 <span className='flex text-sm items-center justify-center rounded-md gap-2 bg-[rgba(255,255,255,0.24)] p-2'><CiLocationOn className='size-5' /> পান্থপথ</span>
                 <span className='flex text-sm items-center justify-center rounded-md gap-2 bg-[rgba(255,255,255,0.24)] p-2'><CiLocationOn className='size-5' /> মিরপুর</span>
@@ -19,7 +21,7 @@ const OurInstatuite = () => {
             </div>
 
             <div>
-                <div className='grid grid-cols-3 gap-6 mt-10'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-10'>
                     <div className='flex items-center justify-start gap-4 bg-[rgba(255,255,255,0.15)] p-4 rounded-xl'>
                         <Image src='https://i.ibb.co.com/yWRxRSb/images.jpg' className='w-28 rounded-md' alt='3d' width={200} height={200} />
                         <div>

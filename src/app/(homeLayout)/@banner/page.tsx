@@ -12,7 +12,7 @@ const page = () => {
             <div className='w-[90%] mx-auto'>
                 <Image src={headline} alt='headline' width={600} className='mx-auto pt-5' />
 
-                <div className='flex justify-center items-center gap-6 mt-8'>
+                <div className='flex md:flex-row flex-col justify-center items-center gap-6 mt-8'>
                     <AvailableAdmisssion/>
                     <AvailableCourse/>
                 </div>

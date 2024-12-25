@@ -11,31 +11,36 @@ import iltesImage from '@/assets/availableCourse/ielts_1700654663556.png'
 import spokenImage from '@/assets/availableCourse/spoken.png'
 import youtubeImage from '@/assets/availableCourse/youtubeMarketing.png'
 import emailImage from '@/assets/availableCourse/email.png'
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 
 const AvailableCourse: React.FC = () => {
 
     const swiperRef = useRef<SwiperType>(null);
+     const [screen, setScreen] = useState(1300)
 
+
+     useEffect(() => {
+            setScreen(window.innerWidth)
+        }, [screen]);
 
 
     return (
 
-        <div className='bg-[rgba(82,48,12,0.48)] relative border border-[rgb(82,48,12)] w-[50%] rounded-xl'>
-            <span className='bg-[rgb(82,48,12)] absolute -top-4 left-60 text-sm text-[#ff9900] border border-[#ff9900] py-1 px-5 rounded-full'>অনলাইন কোর্স</span>
+        <div className='bg-[rgba(82,48,12,0.48)] relative border border-[rgb(82,48,12)] w-full md:w-[50%] rounded-xl'>
+            <span className='bg-[rgb(82,48,12)] md:flex hidden  md:absolute -top-4 left-60 text-sm text-[#ff9900] border border-[#ff9900] py-1 px-5 rounded-full'>অনলাইন কোর্স</span>
             <p className='text-xl mt-10 tracking-widest text-white text-center mx-auto w-72'>পছন্দের স্কিল শিখুন, নিজেকে সেরা করে গড়ে তুলুন</p>
 
             <div className='flex justify-center items-center gap-2 p-4'>
                 <button
-                    className='bg-[rgba(255,254,254,0.34)] p-2 -mr-5 z-10 rounded-full'
+                    className='bg-[rgba(255,254,254,0.34)] p-2 md:-mr-5 md:z-10 rounded-full'
                     onClick={() => swiperRef.current?.slidePrev()}>
                     <FaChevronLeft className='size-5 text-slate-700' />
                 </button>
                 <Swiper
                     className='mt-5'
-                    spaceBetween={20}
-                    slidesPerView={5}
+                    spaceBetween={10}
+                    slidesPerView={screen > 470 ? 5 : 3}
                     onBeforeInit={(swiper) => {
                         swiperRef.current = swiper;
                     }}
@@ -65,7 +70,7 @@ const AvailableCourse: React.FC = () => {
                 </Swiper>
                 <button
                     onClick={() => swiperRef.current?.slideNext()}
-                    className='bg-[rgba(255,254,254,0.35)] p-2 -ml-5 z-10 rounded-full'>
+                    className='bg-[rgba(255,254,254,0.35)] p-2 md:-ml-5 md:z-10 rounded-full'>
                     <FaChevronRight className='size-5 text-slate-700' />
                 </button>
 </div>

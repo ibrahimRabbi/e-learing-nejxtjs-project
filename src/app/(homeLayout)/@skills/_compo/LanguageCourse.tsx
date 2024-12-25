@@ -23,12 +23,19 @@ const LanguageCourse = () => {
 
     const swiperRef = useRef<SwiperType>(null);
     const [data, setData] = useState<object[]>([])
+    const [screen, setScreen] = useState(1300)
+
 
     useEffect(() => {
         fetch('./languageCourse.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
+
+    useEffect(() => {
+        setScreen(window.innerWidth)
+    }, [screen]);
+
 
     return (
 
@@ -41,7 +48,7 @@ const LanguageCourse = () => {
                 </button>
                 <Swiper
                     spaceBetween={20}
-                    slidesPerView={4}
+                    slidesPerView={screen > 600 ? 4 : 2}
                     onBeforeInit={(swiper) => {
                         swiperRef.current = swiper;
                     }}
@@ -58,7 +65,7 @@ const LanguageCourse = () => {
                                             <Image src={item?.image} alt='liveImage' className='w-full rounded-t-md' height={300} width={200} />
 
                                             <div className="p-2">
-                                                <h1 className="text-white text-[16px] mt-1">{item?.title}</h1>
+                                                <h1 className="text-white md:text-[16px] text-sm mt-1">{item?.title}</h1>
                                                 <div className="mt-5">
                                                     <p className='text-sm text-gray-500'>{item?.mentor}</p>
                                                     <button className="flex mt-4 justify-end items-center gap-1 text-purple-400 text-xs font-semibold">বিস্তারিত <FaArrowRight /></button>
@@ -80,7 +87,7 @@ const LanguageCourse = () => {
                     <FaChevronRight className='size-5 text-slate-700' />
                 </button>
             </div>
-            <button className='flex justify-center items-center gap-3 bg-green-500 text-white mt-20 mx-auto py-2 px-5 rounded-lg'>সকল কোর্স <FaArrowRight/></button>
+            <button className='flex justify-center items-center gap-3 bg-green-500 text-white mt-10 md:mt-20 mx-auto py-2 px-5 rounded-lg'>সকল কোর্স <FaArrowRight/></button>
         </div>
     );
 };

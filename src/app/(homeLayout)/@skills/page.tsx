@@ -17,7 +17,7 @@ const page = () => {
                     <h1 className="text-3xl sm:text-4xl mt-2 font-bold mb-4">
                         দেশের সেরা স্কিল ডেভেলপমেন্ট প্ল্যাটফর্ম
                     </h1>
-                    <div className='flex justify-center space-x-10 mt-6'>
+                    <div className='flex justify-center flex-wrap md:space-x-10 space-x-6 gap-2 mt-6'>
                         <p className='flex justify-center items-center gap-2'><FaCheck className='text-teal-400' /> দেশের সেরা শিক্ষক</p>
                         <p className='flex justify-center items-center gap-2'><FaCheck className='text-teal-400' /> ৫ লক্ষ+ শিক্ষার্থী</p>
                         <p className='flex justify-center items-center gap-2'><FaCheck className='text-teal-400' /> ১০০+ অনলাইন কোর্স</p>

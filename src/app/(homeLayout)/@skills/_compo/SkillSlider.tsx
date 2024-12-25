@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaCheck, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { FreeMode, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,6 +21,11 @@ const categories = [
 const SkillSlider = () => {
 
     const swiperRef = useRef<SwiperType>(null);
+    const [screen, setScreen] = useState(1300)
+
+    useEffect(() => {
+        setScreen(window.innerWidth)
+    }, [screen]);
 
 
     return (
@@ -33,7 +38,7 @@ const SkillSlider = () => {
             </button>
             <Swiper
                 spaceBetween={30}
-                slidesPerView={7}
+                slidesPerView={screen > 600 ? 7 : 3}
                 onBeforeInit={(swiper) => {
                     swiperRef.current = swiper;
                 }}

@@ -13,19 +13,25 @@ import Card from '@/components/ui/Card';
 const page = () => {
     const [data, setData] = useState<object[]>([])
     const swiperRef = useRef<SwiperType>(null);
-
+    const [screen, setScreen] = useState(1300)
 
     useEffect(() => {
         fetch('./feedback.json')
             .then(res => res.json())
             .then(data => setData(data))
-    })
+    },[])
      
-    console.log(data);
+    useEffect(() => {
+        setScreen(window.innerWidth)
+    }, [screen]);
+
+    
+
+     
 
     return (
-        <section className='w-[90%] mx-auto mt-28'>
-            <h1 className='text-3xl sm:text-4xl text-center font-bold mb-4 w-[50%] mx-auto'>কেন আমরাই শিক্ষার্থী ও অভিভাবকগণের প্রথম পছন্দ?</h1>
+        <section className='w-[90%] mx-auto md:mt-28 mt-16'>
+            <h1 className='md:text-3xl text-2xl text-center font-bold md:w-[50%] mx-auto'>কেন আমরাই শিক্ষার্থী ও অভিভাবকগণের প্রথম পছন্দ?</h1>
              
                 <div className='flex justify-center items-center gap-4'>
                     <button
@@ -36,7 +42,7 @@ const page = () => {
                     <Swiper
                         className='mx-auto'
                         spaceBetween={30}
-                        slidesPerView={3}
+                        slidesPerView={screen > 470 ? 3 : 1}
                         onBeforeInit={(swiper) => {
                             swiperRef.current = swiper;
                         }}

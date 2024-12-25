@@ -24,14 +24,14 @@ const page =  () => {
 
 
 
-            <div className='grid grid-cols-4 gap-10 mt-10'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-10 mt-10'>
                 {
                     courses.map((course: any, index: number) => {
                         return (
                             <div key={index} className="border rounded-xl p-2">
                                 <div className='avatar'>
                                     <div className='w-full'>
-                                        <Image src={course?.image} alt='liveImage' className='w-full rounded-md  h-[150px]' height={500} width={200} />
+                                        <Image src={course?.image} alt='liveImage' className='w-full rounded-md  md:h-[150px] h-[170px]' height={500} width={200} />
                                     </div>
                                 </div>
                                         

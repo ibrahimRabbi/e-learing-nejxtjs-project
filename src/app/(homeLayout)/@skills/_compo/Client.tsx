@@ -3,7 +3,7 @@ import React from 'react';
 
 const Client = () => {
     return (
-        <div className='bg-slate-900 p-6 text-center rounded-lg mt-20'>
+        <div className='bg-slate-900 p-6 text-center rounded-lg md:mt-20 mt-10'>
             <p className='text-lg mt-4 text-slate-400'>দেশের সেরা প্রতিষ্ঠানগুলো নিচ্ছে আমাদের কর্পোরেট স্কিলস ডেভেলপমেন্ট প্রোগ্রাম</p>
             <div className='grid grid-cols-5 w-[80%] mx-auto mt-5 items-center gap-6 '>
                 
