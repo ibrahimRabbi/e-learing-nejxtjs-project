@@ -19,7 +19,7 @@ const LoginIn = () => {
 
 
     const submitHandler = (data: any) => {
-            fetch('http://localhost:5000/api/auth/sign-in', {
+        fetch('https://e-learning-server-ochre.vercel.app/api/auth/sign-in', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

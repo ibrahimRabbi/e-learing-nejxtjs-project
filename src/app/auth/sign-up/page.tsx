@@ -22,7 +22,7 @@ const SignUp = () => {
         if (data.password !== data.confirm) {
             toast.error('confirm password does not match')
         } else {
-            fetch('http://localhost:5000/api/auth/sign-up', {
+            fetch('https://e-learning-server-ochre.vercel.app/api/auth/sign-up', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
