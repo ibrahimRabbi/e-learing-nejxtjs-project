@@ -40,7 +40,7 @@ const page = () => {
                         <BsTelephoneFill />
                         <span className='md:flex hidden'>16910</span>
                     </div>
-                    <Link href='/auth/log-in' className="bg-green-500 text-white py-2 px-6 text-sm font-semibold rounded-lg">
+                    <Link href='/auth/sign-in' className="bg-green-500 text-white py-2 px-6 text-sm font-semibold rounded-lg">
                         লগ-ইন
                     </Link>
                 </div>
