@@ -5,11 +5,22 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { IoSearch } from 'react-icons/io5';
 import Rmanubar from '@/components/ui/responsive/Rmanubar';
 import Link from 'next/link';
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { FaUserCheck } from 'react-icons/fa';
  
 
 
+const page = async () => {
 
-const page = () => {
+    const cookie = await cookies()
+    const data = cookie.get('accessToken')?.value;
+  
+    if (!data) {
+        redirect('/auth/sign-in')
+    }
+       
+
     return (
         <nav className="bg-white shadow py-2">
             <div className="w-[95%] mx-auto flex items-center md:justify-start justify-between">
@@ -33,16 +44,21 @@ const page = () => {
                 <Manubar />
 
                 {/* Language Selector & Buttons */}
-                <div className="flex items-center gap-4 justify-end md:justify-between w-[60%] md:w-[20%]">
+                <div className={`flex items-center justify-end md:justify-between w-[60%] ${
+                    data ? 'md:w-[15%]' : 'md:w-[20%]'
+                }`}>
                     <IoSearch className='size-5 text-gray-700 md:hidden'/>
                     <button className="text-gray-600 border py-1 px-2 rounded-md text-center font-semibold hover:bg-gray-50 md:flex hidden">EN</button>
                     <div className="text-green-600 font-bold flex items-center gap-1">
                         <BsTelephoneFill />
                         <span className='md:flex hidden'>16910</span>
                     </div>
-                    <Link href='/auth/sign-in' className="bg-green-500 text-white py-2 px-6 text-sm font-semibold rounded-lg">
-                        লগ-ইন
-                    </Link>
+                    {
+                        data ? <FaUserCheck className='size-7 text-green-700' /> :
+                            <Link href='/auth/sign-in' className="bg-green-500 text-white py-2 px-6 text-sm font-semibold rounded-lg">
+                                লগ-ইন
+                            </Link>
+                    }
                 </div>
             </div>
             <Rmanubar/>

@@ -30,8 +30,6 @@ const AvailableAdmisssion = () => {
         setScreen(window.innerWidth)
     }, [screen]);
 
-    console.log(screen)
-
 
     return (
         <div className='bg-[rgba(16,30,70,0.73)] h-[355px] relative border border-[#172d69] w-full md:w-[50%] rounded-xl'>
